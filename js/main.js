@@ -1,4 +1,14 @@
 function fetchCryptonatorList(){
 	// consume currency list from cryptonator API
 	var url = "https://www.cryptonator.com/api/currencies";
+	$.ajax({
+        url: url,
+        method: "GET",
+		dataType: "json",
+        }).done(function(result){
+            console.log(result);
+        }).fail(function(err) {
+			console.log("failed to retrieve data");
+        throw err;
+    });
 }
