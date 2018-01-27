@@ -4,7 +4,7 @@ function fetchCryptonatorList(){
 	$.ajax({
         url: url,
         method: "GET",
-		dataType: "json",
+		accepts: "application/json",
         }).done(function(result){
             console.log(result);
         }).fail(function(err) {
