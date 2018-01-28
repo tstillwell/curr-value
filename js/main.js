@@ -13,3 +13,8 @@ function fetchCryptonatorList(){
             throw err;
 		});
 }
+
+function buildAutocompleteData(result){
+	// transform data into appropriate autocomplete format
+	// and connect it to autocomplete field
+}
