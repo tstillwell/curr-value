@@ -10,5 +10,5 @@ function fetchCryptonatorList(){
         }).fail(function(err) {
             console.log("failed to retrieve data");
             throw err;
-        );
+		});
 }
