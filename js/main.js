@@ -7,6 +7,7 @@ function fetchCryptonatorList(){
         accepts: "application/json",
         }).done(function(result){
             console.log(result);
+			buildAutocompleteData(result);
         }).fail(function(err) {
             console.log("failed to retrieve data");
             throw err;
