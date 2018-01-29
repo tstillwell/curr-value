@@ -20,6 +20,6 @@ function buildAutocompleteData(result){
     var currencies = [];
     for (i = 0; i < result.rows.length; i++) {
         var auto_entry = { value: result.rows[i].code , data: result.rows[i].name };
-        currencies += auto_entry;
+        currencies.push(auto_entry);
     }
 }
