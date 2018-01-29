@@ -17,4 +17,8 @@ function fetchCryptonatorList(){
 function buildAutocompleteData(result){
 	// transform data into appropriate autocomplete format
 	// and connect it to autocomplete field
+	var currencies = [];
+	for (i = 0; i < result.rows.length; i++) {
+		console.log(result.rows[i]);
+	}
 }
