@@ -19,6 +19,7 @@ function buildAutocompleteData(result){
 	// and connect it to autocomplete field
 	var currencies = [];
 	for (i = 0; i < result.rows.length; i++) {
-		console.log(result.rows[i]);
+		var auto_entry = { value: result.rows[i].code , data: result.rows[i].name };
+		currencies += auto_entry;
 	}
 }
