@@ -22,4 +22,10 @@ function buildAutocompleteData(result){
         var auto_entry = { value: result.rows[i].code , data: result.rows[i].name };
         currencies.push(auto_entry);
     }
+    $('#autocomplete').autocomplete({
+        lookup: currencies,
+        onSelect: function (suggestion) {
+            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+    }
+    });
 }
