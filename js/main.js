@@ -24,6 +24,7 @@ function buildAutocompleteData(result){
     }
     $('#autocomplete').autocomplete({
         lookup: currencies,
+        lookupLimit: 20,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
     }
