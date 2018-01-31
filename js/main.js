@@ -27,6 +27,6 @@ function buildAutocompleteData(result){
         lookupLimit: 20,
         onSelect: function (suggestion) {
             console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
-    }
+        }
     });
 }
