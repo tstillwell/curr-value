@@ -30,3 +30,5 @@ function buildAutocompleteData(result){
         }
     });
 }
+
+document.querySelector("#fetch-list-button").addEventListener("click", fetchCryptonatorList);
