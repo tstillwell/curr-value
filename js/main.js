@@ -7,14 +7,14 @@ function fetchCryptonatorList(){
         accepts: "application/json",
         }).done(function(result){
             console.log(result);
-            buildAutocompleteData(result);
+            buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
             console.log("failed to retrieve data");
             throw err;
         });
 }
 
-function buildAutocompleteData(result){
+function buildCryptonatorAutocompleteData(result){
     // transform data into appropriate autocomplete format
     // and connect it to autocomplete field
     var currencies = [];
@@ -22,7 +22,7 @@ function buildAutocompleteData(result){
         var auto_entry = { value: result.rows[i].code , data: result.rows[i].name };
         currencies.push(auto_entry);
     }
-    $('#autocomplete').autocomplete({
+    $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
         lookupLimit: 20,
         onSelect: function (suggestion) {
