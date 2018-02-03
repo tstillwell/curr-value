@@ -36,3 +36,8 @@ function buildCryptonatorAutocompleteData(result){
         }
     });
 }
+
+
+$(document).ready( function () {
+  fetchCryptonatorList();
+});
