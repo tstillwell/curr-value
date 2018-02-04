@@ -38,7 +38,7 @@ function buildCryptonatorAutocompleteData(result){
 }
 
 function selectFromCryptonatorList(currency){
-	console.log("You selected " + currency.value + " " + currency.data);
+	$('.cryptonator-currency-info').html(currency.value + " " + currency.data);
 }
 
 $(document).ready( function () {
