@@ -32,11 +32,14 @@ function buildCryptonatorAutocompleteData(result){
         lookup: currencies,
         lookupLimit: 20,
         onSelect: function (suggestion) {
-            console.log('You selected: ' + suggestion.value + ', ' + suggestion.data);
+            selectFromCryptonatorList(suggestion);
         }
     });
 }
 
+function selectFromCryptonatorList(currency){
+	console.log("You selected " + currency.value + " " + currency.data);
+}
 
 $(document).ready( function () {
   fetchCryptonatorList();
