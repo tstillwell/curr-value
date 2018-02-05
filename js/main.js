@@ -20,6 +20,11 @@ function fetchCryptonatorList(){ // retrieve currencies list
         });
 }
 
+function fetchCryptonatorTicker(base, target) {
+	// retrieve currency ticker data from cryptonator API
+	// base is the currency to compare the target to
+};
+
 function buildCryptonatorAutocompleteData(result){
     // transform data into appropriate autocomplete format
     // and connect it to autocomplete field
