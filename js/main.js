@@ -24,10 +24,9 @@ function buildCryptonatorAutocompleteData(result){
     // transform data into appropriate autocomplete format
     // and connect it to autocomplete field
     var currencies = [];
-    for (i = 0; i < result.rows.length; i++) {
-        var auto_entry = { value: result.rows[i].code , data: result.rows[i].name };
-        currencies.push(auto_entry);
-    }
+    result.rows.forEach(function(item){
+		currencies.push({value: item.code , data: item.name});
+	});
     $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
         lookupLimit: 20,
