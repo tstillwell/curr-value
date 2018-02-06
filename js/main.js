@@ -23,6 +23,18 @@ function fetchCryptonatorList(){ // retrieve currencies list
 function fetchCryptonatorTicker(base, target) {
 	// retrieve currency ticker data from cryptonator API
 	// base is the currency to compare the target to
+	var url = "https://www.cryptonator.com/api/ticker/"
+	url += base + "-" + target;
+	 $.ajax({
+        url: url,
+        method: "GET",
+        accepts: "application/json",
+        }).done(function(result){
+            console.log(result);
+        }).fail(function(err) {
+            console.log("failed to retrieve currency exchange data");
+            throw err;
+        });
 };
 
 function buildCryptonatorAutocompleteData(result){
