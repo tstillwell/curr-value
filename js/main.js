@@ -1,9 +1,9 @@
 function fetchCryptonatorList(){ // retrieve currencies list
-	// check local storage
-	if (localStorage.cryptonator_list) {
-		list = JSON.parse(localStorage.getItem('cryptonator_list'));
-		return buildCryptonatorAutocompleteData(list);
-	}
+    // check local storage
+    if (localStorage.cryptonator_list) {
+        list = JSON.parse(localStorage.getItem('cryptonator_list'));
+        return buildCryptonatorAutocompleteData(list);
+    }
     // consume currency list from cryptonator API
     var url = "https://www.cryptonator.com/api/currencies";
     $.ajax({
@@ -12,7 +12,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         accepts: "application/json",
         }).done(function(result){
             console.log(result);
-			localStorage.setItem('cryptonator_list', JSON.stringify(result));
+            localStorage.setItem('cryptonator_list', JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
             console.log("failed to retrieve data");
@@ -21,11 +21,11 @@ function fetchCryptonatorList(){ // retrieve currencies list
 }
 
 function fetchCryptonatorTicker(base, target) {
-	// retrieve currency ticker data from cryptonator API
-	// base is the currency to compare the target to
-	var url = "https://www.cryptonator.com/api/ticker/"
-	url += base + "-" + target;
-	 $.ajax({
+    // retrieve currency ticker data from cryptonator API
+    // base is the currency to compare the target to
+    var url = "https://www.cryptonator.com/api/ticker/"
+    url += base + "-" + target;
+    $.ajax({
         url: url,
         method: "GET",
         accepts: "application/json",
@@ -42,8 +42,8 @@ function buildCryptonatorAutocompleteData(result){
     // and connect it to autocomplete field
     var currencies = [];
     result.rows.forEach(function(item){
-		currencies.push({value: item.code , data: item.name});
-	});
+        currencies.push({value: item.code , data: item.name});
+    });
     $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
         lookupLimit: 20,
@@ -54,7 +54,7 @@ function buildCryptonatorAutocompleteData(result){
 }
 
 function selectFromCryptonatorList(currency){
-	$('.cryptonator-currency-info').html(currency.data + " - " + currency.value);
+    $('.cryptonator-currency-info').html(currency.data + " - " + currency.value);
 }
 
 $(document).ready( function () {
