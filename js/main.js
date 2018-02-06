@@ -23,6 +23,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
 function fetchCryptonatorTicker(base, target) {
     // retrieve currency ticker data from cryptonator API
     // base is the currency to compare the target to
+    // both must be listed on api currency list
     var url = "https://www.cryptonator.com/api/ticker/"
     url += base + "-" + target;
     $.ajax({
