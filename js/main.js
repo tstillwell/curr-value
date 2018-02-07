@@ -40,11 +40,11 @@ function fetchCryptonatorTicker(base, target) {
 
 function buildCryptonatorAutocompleteData(cryptonator_list){
     // transform data into appropriate autocomplete format
-    // and connect it to autocomplete field
     var currencies = [];
     cryptonator_list.rows.forEach(function(item){
         currencies.push({value: item.code , data: item.name});
     });
+    // connect currencies to autocomplete field
     $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
         lookupLimit: 20,
