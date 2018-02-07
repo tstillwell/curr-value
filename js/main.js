@@ -1,5 +1,5 @@
 function fetchCryptonatorList(){ // retrieve currencies list
-    // check local storage
+    // check local storage before API query
     if (localStorage.cryptonator_list) {
         list = JSON.parse(localStorage.getItem('cryptonator_list'));
         return buildCryptonatorAutocompleteData(list);
@@ -39,7 +39,7 @@ function fetchCryptonatorTicker(base, target) {
 };
 
 function buildCryptonatorAutocompleteData(cryptonator_list){
-    // transform data into appropriate autocomplete format
+    // transform list data into appropriate autocomplete format
     var currencies = [];
     cryptonator_list.rows.forEach(function(item){
         currencies.push({value: item.code , data: item.name});
