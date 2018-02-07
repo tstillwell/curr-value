@@ -38,11 +38,11 @@ function fetchCryptonatorTicker(base, target) {
         });
 };
 
-function buildCryptonatorAutocompleteData(result){
+function buildCryptonatorAutocompleteData(cryptonator_list){
     // transform data into appropriate autocomplete format
     // and connect it to autocomplete field
     var currencies = [];
-    result.rows.forEach(function(item){
+    cryptonator_list.rows.forEach(function(item){
         currencies.push({value: item.code , data: item.name});
     });
     $('#cryptonator-autocomplete').autocomplete({
