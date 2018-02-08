@@ -55,7 +55,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 }
 
 function selectFromCryptonatorList(currency){
-    $('.cryptonator-currency-info').html(currency.data + " - " + currency.value);
+    $('.cryptonator-currency-code').html(currency.value);
+	$('.cryptonator-currency-name').html(currency.data);
 }
 
 $(document).ready( function () {
