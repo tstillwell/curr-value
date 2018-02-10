@@ -20,7 +20,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         });
 }
 
-function fetchCryptonatorTicker(base, target) {
+function fetchCryptonatorTicker(target, base) {
     // retrieve currency ticker data from cryptonator API
     // base is the currency to compare the target to
     // both must be currency codes listed on crypotonator api currency list
@@ -57,7 +57,7 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 function selectFromCryptonatorList(currency){
     $('.cryptonator-currency-code').html(currency.value);
 	$('.cryptonator-currency-name').html(currency.data);
-	fetchCryptonatorTicker(currency.value, "USD");
+	fetchCryptonatorTicker("USD", currency.value);
 }
 
 $(document).ready( function () {
