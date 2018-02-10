@@ -31,7 +31,7 @@ function fetchCryptonatorTicker(base, target) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-            console.log(result);
+            return result;
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
@@ -57,6 +57,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 function selectFromCryptonatorList(currency){
     $('.cryptonator-currency-code').html(currency.value);
 	$('.cryptonator-currency-name').html(currency.data);
+	var ticker_data = fetchCryptonatorTicker(currency.value, "USD");
+	$('.cryptonator-currency-name').html("price");
 }
 
 $(document).ready( function () {
