@@ -32,7 +32,7 @@ function fetchCryptonatorTicker(target, base) {
         accepts: "application/json",
         }).done(function(result){
 			$('.cryptonator-currency-price').html(result.ticker.price);
-			$('.cryptonator-currency-price').html("1hr change: " + result.ticker.change);
+			$('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
