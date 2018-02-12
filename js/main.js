@@ -11,7 +11,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-            console.log(result);
+			console.log(result);
             localStorage.setItem('cryptonator_list', JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
@@ -31,8 +31,10 @@ function fetchCryptonatorTicker(target, base) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-			$('.cryptonator-currency-price').html(result.ticker.price);
-			$('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
+			if (typeof result.ticker !== 'undefined'){
+				$('.cryptonator-currency-price').html(result.ticker.price);
+				$('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
+			}
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
