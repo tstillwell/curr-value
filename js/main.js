@@ -59,6 +59,7 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 
 function selectFromCryptonatorList(currency){
 	$('.cryptonator-currency-price').html(""); //blank price div
+	$('.cryptonator-currency-1hr-change').html(""); //blank change div
     $('.cryptonator-currency-code').html(currency.value);
 	$('.cryptonator-currency-name').html(currency.data);
 	fetchCryptonatorTicker("USD", currency.value);
