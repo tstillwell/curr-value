@@ -48,11 +48,13 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     // connect currencies to autocomplete field
     $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
-        lookupLimit: 20,
+		minChars: 0,
         onSelect: function (suggestion) {
             selectFromCryptonatorList(suggestion);
         }
     });
+	// enable 'empty' search - all results show on click
+	$('#cryptonator-autocomplete').autocomplete( "search", "" );
 }
 
 function selectFromCryptonatorList(currency){
