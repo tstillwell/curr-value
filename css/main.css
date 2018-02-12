@@ -99,10 +99,15 @@ textarea {
 
 .autocomplete-suggestions {
 	background-color: #fff;
+	border: 1px solid #999;
+	overflow: auto;
 }
 
-
-
+.autocomplete-suggestion { 
+	padding: 2px 5px; 
+	white-space: nowrap; 
+	overflow: hidden;
+}
 
 
 
