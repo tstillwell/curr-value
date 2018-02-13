@@ -6,8 +6,5 @@ A tool used to explore currencies.
 
 #### Cryptonator API
 
-https://www.cryptonator.com/api/
-
 Cryptonator API docs
-
-https://www.cryptonator.com/api/currencies
+https://www.cryptonator.com/api/
