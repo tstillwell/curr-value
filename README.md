@@ -1,6 +1,6 @@
 # curr_crawler
 
-A tool used to explore currencies.
+A web tool used to explore currencies.
 
 ## Data Sources
 
