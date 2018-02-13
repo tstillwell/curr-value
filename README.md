@@ -1,6 +1,6 @@
 # curr_crawler
 
-A tool used to explore currencies
+A tool used to explore currencies.
 
 ## Data Sources
 
@@ -11,6 +11,3 @@ https://www.cryptonator.com/api/
 Cryptonator API docs
 
 https://www.cryptonator.com/api/currencies
-
-returns JSON with currencies listed on the cryptonator API
-includes normal currencies and cryptocurrencies 
