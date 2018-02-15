@@ -11,7 +11,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-			console.log(result);
+            console.log(result);
             localStorage.setItem('cryptonator_list', JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
@@ -31,10 +31,10 @@ function fetchCryptonatorTicker(target, base) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-			if (typeof result.ticker !== 'undefined'){
-				$('.cryptonator-currency-price').html(result.ticker.price);
-				$('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
-			}
+            if (typeof result.ticker !== 'undefined'){
+                $('.cryptonator-currency-price').html(result.ticker.price);
+                $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
+            }
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
@@ -50,21 +50,21 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     // connect currencies to autocomplete field
     $('#cryptonator-autocomplete').autocomplete({
         lookup: currencies,
-		minChars: 0,
+        minChars: 0,
         onSelect: function (suggestion) {
             selectFromCryptonatorList(suggestion);
         }
     });
-	// enable 'empty' search - all results show on click
-	$('#cryptonator-autocomplete').autocomplete( "search", "" );
+    // enable 'empty' search - all results show on click
+    $('#cryptonator-autocomplete').autocomplete( "search", "" );
 }
 
 function selectFromCryptonatorList(currency){
-	$('.cryptonator-currency-price').html(""); //blank price div
-	$('.cryptonator-currency-1hr-change').html(""); //blank change div
+    $('.cryptonator-currency-price').html(""); //blank price div
+    $('.cryptonator-currency-1hr-change').html(""); //blank change div
     $('.cryptonator-currency-code').html(currency.value);
-	$('.cryptonator-currency-name').html(currency.data);
-	fetchCryptonatorTicker("USD", currency.value);
+    $('.cryptonator-currency-name').html(currency.data);
+    fetchCryptonatorTicker("USD", currency.value);
 }
 
 $(document).ready( function () {
