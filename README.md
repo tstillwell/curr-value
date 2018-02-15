@@ -1,6 +1,8 @@
 # curr_crawler
 
-A web tool used to explore currencies.
+Simple front-end demo for exploring currencies.
+
+Looks up and displays currency values via the Cryptonator API
 
 ## Data Sources
 
