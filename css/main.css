@@ -118,7 +118,10 @@ textarea {
 	max-width: 20%;
 }
 
-
+.cryptonator-currency-code {
+	text-align: center;
+	text-decoration: underline;
+}
 
 
 
