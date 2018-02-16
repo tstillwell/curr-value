@@ -109,7 +109,9 @@ textarea {
 	overflow: hidden;
 }
 
-
+.content {
+	margin: 1.5rem;
+}
 
 
 
