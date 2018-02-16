@@ -65,6 +65,7 @@ function selectFromCryptonatorList(currency){
     $('.cryptonator-currency-code').html(currency.value);
     $('.cryptonator-currency-name').html(currency.data);
     fetchCryptonatorTicker("USD", currency.value);
+	$('.cryptonator-currency-info').addClass('populated-currency-info');
 }
 
 $(document).ready( function () {

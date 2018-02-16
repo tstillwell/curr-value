@@ -113,7 +113,10 @@ textarea {
 	margin: 1.5rem;
 }
 
-
+.populated-currency-info {
+	border: 1px solid black;
+	max-width: 20%;
+}
 
 
 
