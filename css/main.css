@@ -127,8 +127,13 @@ textarea {
 	text-align: center;
 }
 
+.cryptonator-currency-price {
+	text-align: center;
+}
 
-
+.cryptonator-currency-1hr-change {
+	text-align: center;
+}
 
 /* ==========================================================================
    Helper classes
