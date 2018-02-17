@@ -114,17 +114,21 @@ textarea {
 }
 
 .populated-currency-info {
+	margin-top: 2rem;
 	border: 1px solid black;
 	width: 16rem;
+	height: 12rem;
 }
 
 .cryptonator-currency-code {
 	text-align: center;
+	margin-top: 1rem;
 	text-decoration: underline;
 }
 
 .cryptonator-currency-name {
 	text-align: center;
+	margin-bottom: 1.25rem;
 }
 
 .cryptonator-currency-price {
