@@ -115,7 +115,7 @@ textarea {
 
 .populated-currency-info {
 	border: 1px solid black;
-	max-width: 20%;
+	width: 16rem;
 }
 
 .cryptonator-currency-code {
