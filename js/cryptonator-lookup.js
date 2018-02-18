@@ -35,6 +35,10 @@ function fetchCryptonatorTicker(target, base) {
                 $('.cryptonator-currency-price').html(result.ticker.price);
                 $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
             }
+			else {
+				$('.cryptonator-currency-price').html("Info Unavailable");
+				console.log("Response missing ticker data");
+			}	
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
