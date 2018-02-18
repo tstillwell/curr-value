@@ -96,6 +96,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.content {
+	margin: 1.5rem;
+}
 
 .autocomplete-suggestions {
 	background-color: #fff;
@@ -109,10 +112,6 @@ textarea {
 	overflow: hidden;
 }
 
-.content {
-	margin: 1.5rem;
-}
-
 .populated-currency-info {
 	margin-top: 2rem;
 	border: 1px solid black;
@@ -121,6 +120,7 @@ textarea {
 }
 
 .cryptonator-currency-code {
+	font-size: 125%;
 	text-align: center;
 	margin-top: 1rem;
 	text-decoration: underline;
