@@ -140,6 +140,11 @@ textarea {
 	text-align: center;
 }
 
+.cryptonator-timestamp {
+	margin-top: 1rem;
+	text-align: center;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
