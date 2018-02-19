@@ -34,6 +34,8 @@ function fetchCryptonatorTicker(target, base) {
             if (typeof result.ticker !== 'undefined'){
                 $('.cryptonator-currency-price').html(result.ticker.price);
                 $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
+				var updated_date = new Date(result.timestamp * 1000);
+				$('.cryptonator-timestamp').html(updated_date.toUTCString());
             }
 			else {
 				$('.cryptonator-currency-price').html("Info Unavailable");
