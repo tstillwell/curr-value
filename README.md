@@ -1,5 +1,4 @@
-# curr_crawler
-
+# curr-value
 Super simple currency lookup.
 
 Looks up and displays currency values via the Cryptonator API
