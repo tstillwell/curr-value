@@ -31,6 +31,7 @@ function fetchCryptonatorTicker(target, base) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
+			$('.attribution-div').html("Data from Cryptonator API");
             if (typeof result.ticker !== 'undefined'){
                 $('.cryptonator-currency-price').html(result.ticker.price);
                 $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
