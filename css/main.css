@@ -120,6 +120,7 @@ body {
 	margin-top: 2rem;
 	border: 1px solid black;
 	width: 16rem;
+	padding-bottom: 0.5rem;
 }
 
 .cryptonator-currency-code {
