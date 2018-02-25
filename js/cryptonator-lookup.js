@@ -33,13 +33,13 @@ function fetchCryptonatorTicker(target, base) {
         }).done(function(result){
             attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>"
             $(".attribution").html("Data from " + attribution_link);
-            if (typeof result.ticker !== "undefined"){
+            if (typeof result.ticker !== "undefined"){  // verify valid result
                 $(".cryptonator-currency-price").html(result.ticker.price);
                 $(".cryptonator-currency-1hr-change").html("1hr change: " + result.ticker.change);
                 var updated_date = new Date(result.timestamp * 1000);
                 $(".cryptonator-timestamp").html(updated_date.toUTCString());
             }
-            else {
+            else {  // if result response is missing ticker data
                 $(".cryptonator-currency-price").html("Info Unavailable");
                 console.log("Response missing ticker data");
             }
