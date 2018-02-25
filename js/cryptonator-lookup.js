@@ -31,18 +31,18 @@ function fetchCryptonatorTicker(target, base) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-			attribution_link = "<a href='https://www.cryptonator.com/'>Cryptonator API</a>"
-			$('.attribution').html("Data from " + attribution_link);
+            attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>"
+            $('.attribution').html("Data from " + attribution_link);
             if (typeof result.ticker !== 'undefined'){
                 $('.cryptonator-currency-price').html(result.ticker.price);
                 $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
-				var updated_date = new Date(result.timestamp * 1000);
-				$('.cryptonator-timestamp').html(updated_date.toUTCString());
+                var updated_date = new Date(result.timestamp * 1000);
+                $('.cryptonator-timestamp').html(updated_date.toUTCString());
             }
-			else {
-				$('.cryptonator-currency-price').html("Info Unavailable");
-				console.log("Response missing ticker data");
-			}	
+            else {
+                $('.cryptonator-currency-price').html("Info Unavailable");
+                console.log("Response missing ticker data");
+            }
         }).fail(function(err) {
             console.log("failed to retrieve currency exchange data");
             throw err;
@@ -73,7 +73,7 @@ function selectFromCryptonatorList(currency){
     $('.cryptonator-currency-code').html(currency.value);
     $('.cryptonator-currency-name').html(currency.data);
     fetchCryptonatorTicker("USD", currency.value);
-	$('.cryptonator-currency-info').addClass('populated-currency-info');
+    $('.cryptonator-currency-info').addClass('populated-currency-info');
 }
 
 $(document).ready( function () {
