@@ -1,7 +1,7 @@
 function fetchCryptonatorList(){ // retrieve currencies list
     // check local storage before API query
     if (localStorage.cryptonator_list) {
-        list = JSON.parse(localStorage.getItem('cryptonator_list'));
+        list = JSON.parse(localStorage.getItem("cryptonator_list"));
         return buildCryptonatorAutocompleteData(list);
     }
     // consume currency list from cryptonator API
@@ -12,7 +12,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         accepts: "application/json",
         }).done(function(result){
             console.log(result);
-            localStorage.setItem('cryptonator_list', JSON.stringify(result));
+            localStorage.setItem("cryptonator_list", JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
             console.log("failed to retrieve data");
@@ -32,15 +32,15 @@ function fetchCryptonatorTicker(target, base) {
         accepts: "application/json",
         }).done(function(result){
             attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>"
-            $('.attribution').html("Data from " + attribution_link);
-            if (typeof result.ticker !== 'undefined'){
-                $('.cryptonator-currency-price').html(result.ticker.price);
-                $('.cryptonator-currency-1hr-change').html("1hr change: " + result.ticker.change);
+            $(".attribution").html("Data from " + attribution_link);
+            if (typeof result.ticker !== "undefined"){
+                $(".cryptonator-currency-price").html(result.ticker.price);
+                $(".cryptonator-currency-1hr-change").html("1hr change: " + result.ticker.change);
                 var updated_date = new Date(result.timestamp * 1000);
-                $('.cryptonator-timestamp').html(updated_date.toUTCString());
+                $(".cryptonator-timestamp").html(updated_date.toUTCString());
             }
             else {
-                $('.cryptonator-currency-price').html("Info Unavailable");
+                $(".cryptonator-currency-price").html("Info Unavailable");
                 console.log("Response missing ticker data");
             }
         }).fail(function(err) {
@@ -56,7 +56,7 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         currencies.push({value: item.code , data: item.name});
     });
     // connect currencies to autocomplete field
-    $('#cryptonator-autocomplete').autocomplete({
+    $("#cryptonator-autocomplete").autocomplete({
         lookup: currencies,
         minChars: 0,
         onSelect: function (suggestion) {
@@ -64,16 +64,16 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         }
     });
     // enable 'empty' search - all results show on click
-    $('#cryptonator-autocomplete').autocomplete( "search", "" );
+    $("#cryptonator-autocomplete").autocomplete( "search", "" );
 }
 
 function selectFromCryptonatorList(currency){
-    $('.cryptonator-currency-price').html(""); //blank price div
-    $('.cryptonator-currency-1hr-change').html(""); //blank change div
-    $('.cryptonator-currency-code').html(currency.value);
-    $('.cryptonator-currency-name').html(currency.data);
+    $(".cryptonator-currency-price").html(""); //blank price div
+    $(".cryptonator-currency-1hr-change").html(""); //blank change div
+    $(".cryptonator-currency-code").html(currency.value);
+    $(".cryptonator-currency-name").html(currency.data);
     fetchCryptonatorTicker("USD", currency.value);
-    $('.cryptonator-currency-info').addClass('populated-currency-info');
+    $(".cryptonator-currency-info").addClass("populated-currency-info");
 }
 
 $(document).ready( function () {
