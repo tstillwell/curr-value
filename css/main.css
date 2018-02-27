@@ -117,6 +117,8 @@ body {
 }
 
 .populated-currency-info {
+	background-color: #272b33;
+	color: #d3d3d3;
 	margin-top: 2rem;
 	border: 1px solid black;
 	width: 16rem;
@@ -150,8 +152,13 @@ body {
 }
 
 .attribution {
+	color: #d3d3d3;
 	text-align: center;
 }
+
+.attribution a {
+	color: #d3d3d3;
+}	
 
 /* ==========================================================================
    Helper classes
