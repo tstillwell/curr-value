@@ -1,11 +1,11 @@
 function fetchCryptonatorList(){ // retrieve currencies list
     // check local storage before API query
     if (localStorage.cryptonator_list) {
-        list = JSON.parse(localStorage.getItem("cryptonator_list"));
+        let list = JSON.parse(localStorage.getItem("cryptonator_list"));
         return buildCryptonatorAutocompleteData(list);
     }
     // consume currency list from cryptonator API
-    var url = "https://www.cryptonator.com/api/currencies";
+    let url = "https://www.cryptonator.com/api/currencies";
     $.ajax({
         url: url,
         method: "GET",
@@ -15,7 +15,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
             localStorage.setItem("cryptonator_list", JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
-            var error = "Unable to retrieve currency list via Cryptonator API";
+            let error = "Unable to retrieve currency list via Cryptonator API";
             $(".cryptonator-api-error").html(error);
             console.log("failed to retrieve data");
             throw err;
