@@ -15,7 +15,8 @@ function fetchCryptonatorList(){ // retrieve currencies list
             localStorage.setItem("cryptonator_list", JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
-			$(".cryptonator-api-error").html("Unable to retrieve currency list via Cryptonator API");
+            var error = "Unable to retrieve currency list via Cryptonator API";
+            $(".cryptonator-api-error").html(error);
             console.log("failed to retrieve data");
             throw err;
         });
