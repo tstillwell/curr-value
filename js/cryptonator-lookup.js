@@ -26,7 +26,7 @@ function fetchCryptonatorTicker(target, base) {
     // retrieve currency ticker data from cryptonator API
     // base is the currency to compare the target to
     // both must be currency codes listed on crypotonator api currency list
-    var url = "https://www.cryptonator.com/api/ticker/"
+    let url = "https://www.cryptonator.com/api/ticker/"
     url += base + "-" + target;  // ex: btc-usd
     $.ajax({
         url: url,
@@ -39,7 +39,7 @@ function fetchCryptonatorTicker(target, base) {
                 $(".cryptonator-api-error").html  // remove old API errors
                 $(".cryptonator-currency-price").html(result.ticker.price);
                 $(".cryptonator-currency-1hr-change").html("1hr change: " + result.ticker.change);
-                var updated_date = new Date(result.timestamp * 1000);
+                let updated_date = new Date(result.timestamp * 1000);
                 $(".cryptonator-timestamp").html(updated_date.toUTCString());
             }
             else {  // if result response is missing ticker data
