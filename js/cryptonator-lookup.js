@@ -54,7 +54,7 @@ function fetchCryptonatorTicker(target, base) {
 
 function buildCryptonatorAutocompleteData(cryptonator_list){
     // transform list data into appropriate autocomplete format
-    var currencies = [];
+    let currencies = [];
     cryptonator_list.rows.forEach(function(item){
         currencies.push({value: item.code , data: item.name});
     });
