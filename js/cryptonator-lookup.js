@@ -33,7 +33,7 @@ function fetchCryptonatorTicker(target, base) {
         method: "GET",
         accepts: "application/json",
         }).done(function(result){
-            attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>"
+            let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
             $(".attribution").html("Data from " + attribution_link);
             if (typeof result.ticker !== "undefined"){  // verify valid result
                 $(".cryptonator-api-error").html("")  // remove old API errors
