@@ -36,7 +36,7 @@ function fetchCryptonatorTicker(target, base) {
             let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
             $(".attribution").html("Data from " + attribution_link);
             if (typeof result.ticker !== "undefined"){  // verify valid result
-                $(".cryptonator-api-error").html("")  // remove old API errors
+                $(".cryptonator-api-error").html("");  // remove old API errors
                 $(".cryptonator-currency-price").html(result.ticker.price);
                 $(".cryptonator-currency-1hr-change").html("1hr change: " + result.ticker.change);
                 let updated_date = new Date(result.timestamp * 1000);
