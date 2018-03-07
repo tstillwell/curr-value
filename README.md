@@ -3,6 +3,8 @@ Super simple currency conversion lookup.
 
 Finds currency values via the Cryptonator API.
 
+To use the app locally, open `index.html` in a browser.
+
 Built with HTML5, CSS3, javascript and jQuery.
 
 #### jQuery-Autocomplete
