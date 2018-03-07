@@ -11,6 +11,12 @@ Uses Ajax Autocomplete for jQuery.
 
 https://github.com/devbridge/jQuery-Autocomplete
 
+#### html5 boilerplate
+
+Uses html5 boilerplate.
+
+https://github.com/h5bp/html5-boilerplate
+
 #### Cryptonator API
 
 Cryptonator API docs
