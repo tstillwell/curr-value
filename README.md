@@ -23,3 +23,9 @@ https://github.com/h5bp/html5-boilerplate
 
 Cryptonator API docs
 https://www.cryptonator.com/api/
+
+
+## LICENSE
+
+The code is available under the MIT license.
+See LICENSE file for full licensing text.
