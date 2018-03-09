@@ -42,7 +42,7 @@ function fetchCryptonatorTicker(target, base) {
                 let updated_date = new Date(result.timestamp * 1000);
                 $(".cryptonator-timestamp").html(updated_date.toUTCString());
             }
-            else {  // if result response is missing ticker data
+            else {  // show error if result response is missing ticker data
                 $(".cryptonator-currency-price").html("Info Unavailable");
                 console.log("Response missing ticker data");
             }
