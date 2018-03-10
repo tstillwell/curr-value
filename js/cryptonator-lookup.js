@@ -47,7 +47,7 @@ function fetchCryptonatorTicker(target, base) {
                 console.log("Response missing ticker data");
             }
         }).fail(function(err) {
-			let error = "Failed to obtain valid data from Cryptonator API";
+            let error = "Failed to obtain valid data from Cryptonator API";
             $(".cryptonator-api-error").html(error);
             throw err;
         });
