@@ -10,13 +10,11 @@ function fetchCryptonatorList(){ // retrieve currencies list
         url: url,
         method: "GET",
         }).done(function(result){
-            console.log(result);
             localStorage.setItem("cryptonator_list", JSON.stringify(result));
             buildCryptonatorAutocompleteData(result);
         }).fail(function(err) {
             let error = "Unable to retrieve currency list via Cryptonator API";
             $(".cryptonator-api-error").html(error);
-            console.log("failed to retrieve data");
             throw err;
         });
 }
@@ -42,7 +40,6 @@ function fetchCryptonatorTicker(target, base) {
             }
             else {  // show error if result response is missing ticker data
                 $(".cryptonator-currency-price").html("Info Unavailable");
-                console.log("Response missing ticker data");
             }
         }).fail(function(err) {
             let error = "Failed to obtain valid data from Cryptonator API";
