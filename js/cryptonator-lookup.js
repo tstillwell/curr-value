@@ -9,7 +9,6 @@ function fetchCryptonatorList(){ // retrieve currencies list
     $.ajax({
         url: url,
         method: "GET",
-        accepts: "application/json",
         }).done(function(result){
             console.log(result);
             localStorage.setItem("cryptonator_list", JSON.stringify(result));
