@@ -30,7 +30,6 @@ function fetchCryptonatorTicker(target, base) {
     $.ajax({
         url: url,
         method: "GET",
-        accepts: "application/json",
         }).done(function(result){
             let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
             $(".attribution").html("Data from " + attribution_link);
