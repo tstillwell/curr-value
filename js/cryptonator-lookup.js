@@ -60,12 +60,11 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     $("#cryptonator-autocomplete").autocomplete({
         lookup: currencies,
         minChars: 0,
+		search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
             selectFromCryptonatorList(suggestion);
         }
     });
-    // enable 'empty' search - all results show on click
-    $("#cryptonator-autocomplete").autocomplete( "search", "" );
 }
 
 function selectFromCryptonatorList(currency){
