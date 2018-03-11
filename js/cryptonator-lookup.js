@@ -53,8 +53,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     // implementation uses jquery autocomplete
     // https://github.com/devbridge/jQuery-Autocomplete
     let currencies = [];
-    cryptonator_list.rows.forEach(function(item){
-        currencies.push({value: item.code , data: item.name});
+    cryptonator_list.rows.forEach(function(currency){
+        currencies.push({value: currency.code , data: currency.name});
     });
     // connect currencies to autocomplete field
     $("#cryptonator-autocomplete").autocomplete({
