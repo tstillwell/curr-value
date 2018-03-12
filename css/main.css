@@ -118,6 +118,7 @@ body {
 }
 
 .populated-currency-info {
+	position: relative;
     background-color: #272b33;
     color: #d3d3d3;
     margin-top: 2rem;
