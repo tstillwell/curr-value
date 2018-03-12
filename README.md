@@ -24,6 +24,9 @@ https://github.com/h5bp/html5-boilerplate
 Cryptonator API docs
 https://www.cryptonator.com/api/
 
+#### Draggable Element javascript 
+
+https://jsfiddle.net/tovic/Xcb8d/
 
 ## LICENSE
 
