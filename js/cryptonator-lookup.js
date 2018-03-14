@@ -56,13 +56,21 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     cryptonator_list.rows.forEach(function(currency){
         currencies.push({value: currency.code , data: currency.name});
     });
-    // connect currencies to autocomplete field
+    // connect currencies to autocomplete fields
     $("#cryptonator-autocomplete").autocomplete({
         lookup: currencies,
         minChars: 0,
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
             selectFromCryptonatorList(suggestion);
+        }
+    });
+	$("#cryptonator-autocomplete-base").autocomplete({
+        lookup: currencies,
+        minChars: 0,
+        search: "",  // 'empty' search - all results show on click
+        onSelect: function (suggestion) {
+            console.log(suggestion);
         }
     });
 }
