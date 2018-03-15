@@ -62,7 +62,10 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         minChars: 0,
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
-            selectFromCryptonatorList(suggestion);
+			let base_currency = $('#cryptonator-autocomplete-base')[0]['value'];
+			console.log("base is ");
+			console.log(base_currency);
+            selectFromCryptonatorList(suggestion, base_currency);
         }
     });
 	$("#cryptonator-autocomplete-base").autocomplete({
@@ -75,13 +78,13 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
     });
 }
 
-function selectFromCryptonatorList(currency){
+function selectFromCryptonatorList(currency, base){
     // populate (or repopulate) the currency info div
     $(".cryptonator-currency-price").html(""); //blank price div
     $(".cryptonator-currency-1hr-change").html(""); //blank change div
     $(".cryptonator-currency-code").html(currency.value);
     $(".cryptonator-currency-name").html(currency.data);
-    fetchCryptonatorTicker("USD", currency.value);
+    fetchCryptonatorTicker(base, currency.value);
     $(".cryptonator-currency-info").addClass("populated-currency-info");
 }
 
