@@ -87,6 +87,10 @@ function selectFromCryptonatorList(currency, base){
     $(".cryptonator-currency-info").addClass("populated-currency-info");
 }
 
+function refreshInfoDiv() {
+    // perform updated lookup for existing info div
+}
+
 $(document).ready( function () {
   fetchCryptonatorList();
 });
