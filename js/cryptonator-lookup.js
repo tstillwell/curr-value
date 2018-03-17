@@ -98,4 +98,5 @@ function refreshInfoDiv() {
 
 $(document).ready( function () {
   fetchCryptonatorList();
+  document.querySelector('#refresh-cryptonator-lookup').addEventListener("click", refreshInfoDiv);
 });
