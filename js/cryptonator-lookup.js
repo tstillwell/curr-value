@@ -62,8 +62,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         minChars: 0,
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
-            let base_currency = $('#cryptonator-autocomplete-base')[0].value;
-            selectFromCryptonatorList(suggestion, base_currency);
+            let base_currency = $('#cryptonator-autocomplete-base')[0];
+            selectFromCryptonatorList(suggestion, base_currency.value);
         }
     });
     $("#cryptonator-autocomplete-base").autocomplete({
