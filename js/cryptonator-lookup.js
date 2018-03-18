@@ -78,7 +78,7 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 }
 
 function selectFromCryptonatorList(currency, base){
-    // populate (or repopulate) the currency info div
+    // populate the currency info div and apply class which displays it
     $(".cryptonator-currency-price").html(""); //blank price div
     $(".cryptonator-currency-1hr-change").html(""); //blank change div
     $(".cryptonator-currency-code").html(currency.value);
