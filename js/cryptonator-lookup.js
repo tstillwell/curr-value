@@ -98,4 +98,6 @@ $(document).ready( function () {
   fetchCryptonatorList();
   let refresh_data_button = document.querySelector('#refresh-cryptonator-lookup');
   refresh_data_button.addEventListener("click", refreshInfoDiv);
+  // auto-refresh every 2 minutes
+  setInterval(function(){ refreshInfoDiv() }, 120000);
 });
