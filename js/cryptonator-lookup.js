@@ -42,7 +42,7 @@ function fetchCryptonatorTicker(target, base) {
                 $(".cryptonator-currency-price").html("Info Unavailable");
             }
         }).fail(function(err) {
-            let error = "Failed to obtain valid data from Cryptonator API";
+            let error = "Failed to obtain updated data from Cryptonator API";
             $(".cryptonator-api-error").html(error);
             throw err;
         });
