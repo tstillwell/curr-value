@@ -2,6 +2,8 @@
 Super simple currency conversion lookup.
 
 Finds currency values via the Cryptonator API.
+Auto-refreshes current lookup periodically
+to provide current data.
 
 To use the app locally, open `index.html` in a browser.
 
