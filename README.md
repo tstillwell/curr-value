@@ -1,5 +1,5 @@
 # curr-value
-Super simple currency conversion lookup.
+Super simple realtime currency conversion lookup.
 
 Finds currency values via the Cryptonator API.
 Auto-refreshes current lookup periodically
