@@ -64,7 +64,12 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
             let base_currency = $('#cryptonator-autocomplete-base')[0];
+			if (base_currency.value != '') {
             selectFromCryptonatorList(suggestion, base_currency.value);
+			}
+			else {
+			console.log("Skipping lookup due to empty base");
+			}
         }
     });
     $("#cryptonator-autocomplete-base").autocomplete({
