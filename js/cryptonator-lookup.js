@@ -96,7 +96,9 @@ function refreshInfoDiv() {
     // perform updated lookup for existing info div
     let base_currency = $('#cryptonator-autocomplete-base')[0];
     let target_currency = $('#cryptonator-autocomplete')[0];
-    selectFromCryptonatorList(target_currency, base_currency.value);
+    if (target_currency != '' && base_currency != '') { 
+        selectFromCryptonatorList(target_currency, base_currency.value);
+    }
 }
 
 $(document).ready( function () {
