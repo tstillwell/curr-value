@@ -64,12 +64,9 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
             let base_currency = $('#cryptonator-autocomplete-base')[0];
-			if (base_currency.value != '') {
-            selectFromCryptonatorList(suggestion, base_currency.value);
-			}
-			else {
-			console.log("Skipping lookup due to empty base");
-			}
+            if (base_currency.value != '') {  // prevent empty/invalid lookups
+                selectFromCryptonatorList(suggestion, base_currency.value);
+            }
         }
     });
     $("#cryptonator-autocomplete-base").autocomplete({
@@ -78,12 +75,9 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
             let target_currency = $('#cryptonator-autocomplete')[0];
-			if (target_currency.value != '') {
-            selectFromCryptonatorList(target_currency, suggestion.value);
-			}
-			else {
-			console.log("Skipping lookup due to empty target");
-			}
+            if (target_currency.value != '') {  // prevent empty/invalid lookups
+                selectFromCryptonatorList(target_currency, suggestion.value);
+            }
         }
     });
 }
