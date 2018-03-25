@@ -107,6 +107,7 @@ body {
 
 #cryptonator-autocomplete-base, #cryptonator-autocomplete{
 	min-height: 1.5rem;
+	margin-bottom: 0.75rem;
 }
 
 #cryptonator-autocomplete-base:focus, #cryptonator-autocomplete:focus{
