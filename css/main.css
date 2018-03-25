@@ -105,7 +105,11 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
-#cryptonator-autocomplete-base:focus,  #cryptonator-autocomplete:focus{
+#cryptonator-autocomplete-base, #cryptonator-autocomplete{
+	min-height: 1.5rem;
+}
+
+#cryptonator-autocomplete-base:focus, #cryptonator-autocomplete:focus{
 	box-shadow: 0 0 5px lightblue;
 	padding-right:1em;
 }
