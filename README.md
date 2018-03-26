@@ -28,5 +28,5 @@ https://www.cryptonator.com/api/
 
 ## LICENSE
 
-The code is available under the MIT license.
-See LICENSE file for full licensing text.
+MIT license
+See LICENSE file for full license text
