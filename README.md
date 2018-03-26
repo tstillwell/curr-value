@@ -3,7 +3,7 @@ Super simple realtime currency conversion lookup.
 
 Finds currency values via the Cryptonator API.
 Auto-refreshes current lookup periodically
-to provide current data.
+to provide updated data.
 
 To use the app locally, open `index.html` in a browser.
 
