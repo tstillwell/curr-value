@@ -96,7 +96,7 @@ function refreshLookup() {
     // obtrain new data for existing lookup
     let base_currency = $('#cryptonator-autocomplete-base')[0];
     let target_currency = $('#cryptonator-autocomplete')[0];
-    if (target_currency != '' && base_currency != '') { 
+    if (target_currency.value != '' && base_currency.value != '') { 
         selectFromCryptonatorList(target_currency, base_currency.value);
     }
 }
