@@ -92,7 +92,7 @@ function selectFromCryptonatorList(currency, base){
     $(".cryptonator-currency-info").addClass("populated-currency-info");
 }
 
-function refreshInfoDiv() {
+function refreshLookup() {
     // obtrain new data for existing lookup
     let base_currency = $('#cryptonator-autocomplete-base')[0];
     let target_currency = $('#cryptonator-autocomplete')[0];
@@ -104,5 +104,5 @@ function refreshInfoDiv() {
 $(document).ready( function () {
   fetchCryptonatorList();
   // auto-refresh every 2 minutes
-  setInterval(function(){ refreshInfoDiv() }, 120000);
+  setInterval(function(){ refreshLookup() }, 120000);
 });
