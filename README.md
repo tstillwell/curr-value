@@ -23,10 +23,19 @@ This is handled using
 Second, the autocomplete fields are populated
 with the currencies from this list.
 
+
 The function
 `buildCryptonatorAutocompleteData()`
 performs this populating. This uses
 the Ajax AutoComplete for jQuery API.
+
+Once those two steps are done,
+queries can be performed.
+
+The `fetchCryptonatorTicker()`
+function performs the actual queries
+using the cryptonator API and displays
+the data to the user.
 
 
 #### jQuery-Autocomplete
