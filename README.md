@@ -9,6 +9,11 @@ To use the app locally, open `index.html` in a browser.
 
 Built with HTML5, CSS3, javascript and jQuery.
 
+### Lookups Explained
+
+Currency lookups are performed via
+`cryptonator-lookup.js`
+
 #### jQuery-Autocomplete
 
 Uses Ajax Autocomplete for jQuery.
