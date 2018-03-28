@@ -14,6 +14,21 @@ Built with HTML5, CSS3, javascript and jQuery.
 Currency lookups are performed via
 `cryptonator-lookup.js`
 
+First, the list of currencies
+supported by the API is loaded.
+
+This is handled using
+`fetchCryptonatorList()` function
+
+Second, the autocomplete fields are populated
+with the currencies from this list.
+
+The function
+`buildCryptonatorAutocompleteData()`
+performs this populating. This uses
+the Ajax AutoComplete for jQuery API.
+
+
 #### jQuery-Autocomplete
 
 Uses Ajax Autocomplete for jQuery.
