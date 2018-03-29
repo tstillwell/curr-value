@@ -20,21 +20,22 @@ First, the list of currencies
 supported by the API is loaded.
 
 This is handled using
-`fetchCryptonatorList()` function
+`fetchCryptonatorList()`
 
 Second, the autocomplete fields are populated
 with the currencies from this list.
 
-The function
 `buildCryptonatorAutocompleteData()`
+
 performs this populating using
 the Ajax AutoComplete for jQuery API.
 
 Once those two steps are done,
 queries can be performed.
 
-The `fetchCryptonatorTicker()`
-function performs the actual queries
+`fetchCryptonatorTicker()`
+
+performs the actual queries
 using the cryptonator API and displays
 the data to the user.
 
