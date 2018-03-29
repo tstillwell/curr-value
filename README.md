@@ -13,6 +13,7 @@ Built with HTML5, CSS3, javascript and jQuery.
 
 Currency lookups are performed via
 `cryptonator-lookup.js`
+by making calls to the Cryptonator API.
 
 First, the list of currencies
 supported by the API is loaded.
@@ -23,10 +24,9 @@ This is handled using
 Second, the autocomplete fields are populated
 with the currencies from this list.
 
-
 The function
 `buildCryptonatorAutocompleteData()`
-performs this populating. This uses
+performs this populating using
 the Ajax AutoComplete for jQuery API.
 
 Once those two steps are done,
