@@ -63,8 +63,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         minChars: 0,
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
-            let base_currency = $('#cryptonator-autocomplete-base')[0];
-            if (base_currency.value != '') {  // prevent empty/invalid lookups
+            let base_currency = $("#cryptonator-autocomplete-base")[0];
+            if (base_currency.value != "") {  // prevent empty/invalid lookups
                 selectFromCryptonatorList(suggestion, base_currency.value);
             }
         }
@@ -74,8 +74,8 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
         minChars: 0,
         search: "",  // 'empty' search - all results show on click
         onSelect: function (suggestion) {
-            let target_currency = $('#cryptonator-autocomplete')[0];
-            if (target_currency.value != '') {  // prevent empty/invalid lookups
+            let target_currency = $("#cryptonator-autocomplete")[0];
+            if (target_currency.value != "") {  // prevent empty/invalid lookups
                 selectFromCryptonatorList(target_currency, suggestion.value);
             }
         }
