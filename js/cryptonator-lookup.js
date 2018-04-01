@@ -47,7 +47,7 @@ function fetchCryptonatorTicker(target, base) {
             $(".cryptonator-api-error").html(error);
             throw err;
         });
-};
+}
 
 function buildCryptonatorAutocompleteData(cryptonator_list){
     // transform list data into appropriate autocomplete format
