@@ -13,7 +13,7 @@ Built with HTML5, CSS3, javascript and jQuery.
 ### Lookups Explained
 
 Currency lookups are performed using
-`cryptonator-lookup.js`
+`js/cryptonator-lookup.js`
 
 by making calls to the Cryptonator API.
 
