@@ -33,14 +33,14 @@ function fetchCryptonatorTicker(target, base) {
             $(".attribution").html("Data from " + attribution_link);
             if (typeof result.ticker !== "undefined"){  // verify valid result
                 $(".cryptonator-api-error").html("");  // hide older API errors
-                $(".cryptonator-currency-price").html(result.ticker.price);
-                $(".cryptonator-currency-1hr-change").html("1hr change: " + result.ticker.change);
+                $(".currency-price").html(result.ticker.price);
+                $(".currency-1hr-change").html("1hr change: " + result.ticker.change);
                 let updated_date = new Date(result.timestamp * 1000);
-                $(".cryptonator-timestamp").html(updated_date.toUTCString());
+                $(".currency-timestamp").html(updated_date.toUTCString());
                 document.title = result.ticker.base + " " + result.ticker.price;
             }
             else {  // show error if result response is missing ticker data
-                $(".cryptonator-currency-price").html("Info Unavailable");
+                $("currency-price").html("Info Unavailable");
             }
         }).fail(function(err) {
             let error = "Failed to obtain updated data from Cryptonator API";
@@ -84,10 +84,10 @@ function buildCryptonatorAutocompleteData(cryptonator_list){
 
 function selectFromCryptonatorList(currency, base){
     // populate the currency info div and apply class which displays it
-    $(".cryptonator-currency-price").html(""); //blank price div
-    $(".cryptonator-currency-1hr-change").html(""); //blank change div
-    $(".cryptonator-currency-code").html(currency.value);
-    $(".cryptonator-currency-name").html(currency.data);
+    $(".currency-price").html(""); //blank price div
+    $(".currency-1hr-change").html(""); //blank change div
+    $(".currency-code").html(currency.value);
+    $(".currency-name").html(currency.data);
     fetchCryptonatorTicker(base, currency.value);
     $(".cryptonator-currency-info").addClass("populated-currency-info");
 }
