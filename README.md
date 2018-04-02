@@ -1,4 +1,5 @@
 # curr-value
+
 Super simple realtime currency conversion lookup.
 
 - Finds currency values via the Cryptonator API.
@@ -61,4 +62,5 @@ https://www.cryptonator.com/api/
 ## LICENSE
 
 MIT license
+
 See LICENSE file for full license text
