@@ -103,6 +103,6 @@ function refreshLookup() {
 
 $(document).ready( function () {
   fetchCryptonatorList();
-  // update current lookup every 2 minutes
-  setInterval(function(){ refreshLookup() }, 120000);
+  refresh_timer = 120000 // time in ms between updates
+  setInterval(function(){ refreshLookup() }, refresh_timer);
 });
