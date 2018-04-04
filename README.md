@@ -56,7 +56,6 @@ https://github.com/h5bp/html5-boilerplate
 
 #### Cryptonator API
 
-Cryptonator API docs
 https://www.cryptonator.com/api/
 
 ## LICENSE
