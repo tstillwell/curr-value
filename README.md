@@ -16,8 +16,6 @@ Built with HTML5, CSS3, javascript and jQuery.
 Currency lookups are performed using
 `js/cryptonator-lookup.js`
 
-by making calls to the Cryptonator API.
-
 First, the list of currencies
 supported by the API is loaded.
 
