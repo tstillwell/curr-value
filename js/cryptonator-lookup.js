@@ -5,7 +5,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
         return buildCryptonatorAutocompleteData(list);
     }
     // consume currency list from cryptonator API
-    let url = "https://www.cryptonator.com/api/currencies";
+    let url = "https://www.cryptonator.com/api/currencies/";
     $.ajax({
         url: url,
         method: "GET",
