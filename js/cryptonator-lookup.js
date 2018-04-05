@@ -29,24 +29,28 @@ function fetchCryptonatorTicker(target, base) {
         url: url,
         method: "GET",
         }).done(function(result){
-            let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
-            $(".attribution").html("Data from " + attribution_link);
-            if (typeof result.ticker !== "undefined"){  // verify valid result
-                $(".cryptonator-api-error").html("");  // hide older API errors
-                $(".currency-price").html(result.ticker.price);
-                $(".currency-1hr-change").html("1hr change: " + result.ticker.change);
-                let updated_date = new Date(result.timestamp * 1000);
-                $(".currency-timestamp").html(updated_date.toUTCString());
-                document.title = result.ticker.base + " " + result.ticker.price;
-            }
-            else {  // show error if result response is missing ticker data
-                $("currency-price").html("Info Unavailable");
-            }
+            populateCurrencyInfo(result);
         }).fail(function(err) {
             let error = "Failed to obtain updated data from Cryptonator API";
             $(".cryptonator-api-error").html(error);
             throw err;
         });
+}
+
+function populateCurrencyInfo(response){
+    let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
+    $(".attribution").html("Data from " + attribution_link);
+    if (typeof response.ticker !== "undefined"){  // verify valid result
+        $(".cryptonator-api-error").html("");  // hide older API errors
+        $(".currency-price").html(response.ticker.price);
+        $(".currency-1hr-change").html("1hr change: " + response.ticker.change);
+        let updated_date = new Date(response.timestamp * 1000);
+        $(".currency-timestamp").html(updated_date.toUTCString());
+        document.title = response.ticker.base + " " + response.ticker.price;
+        }
+        else {  // show error if result response is missing ticker data
+            $("currency-price").html("Info Unavailable");
+        }
 }
 
 function buildCryptonatorAutocompleteData(cryptonator_list){
