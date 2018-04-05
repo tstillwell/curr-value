@@ -38,6 +38,7 @@ function fetchCryptonatorTicker(target, base) {
 }
 
 function populateCurrencyInfo(response){
+    // display ticker data to user
     let attribution_link = "<a href=\"https://www.cryptonator.com/\">Cryptonator API</a>";
     $(".attribution").html("Data from " + attribution_link);
     if (typeof response.ticker !== "undefined"){  // verify valid result
