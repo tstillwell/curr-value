@@ -28,7 +28,7 @@ with the currencies from this list.
 `buildCryptonatorAutocompleteData()`
 
 performs this populating using
-the Ajax AutoComplete for jQuery API.
+jQuery Autocomplete.
 
 Once those two steps are done,
 queries can be performed.
