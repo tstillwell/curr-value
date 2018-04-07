@@ -35,7 +35,7 @@ queries can be performed.
 
 `fetchCryptonatorTicker()`
 
-performs the actual queries
+performs 'simple ticker' queries
 using the cryptonator API and displays
 the data to the user.
 
