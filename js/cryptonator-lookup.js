@@ -1,3 +1,7 @@
+// cryptonator-lookup.js
+// https://github.com/tstillwell/curr-value
+// MIT License
+
 function fetchCryptonatorList(){ // retrieve currencies list
     // check local storage before API query
     if (localStorage.cryptonator_list) {
