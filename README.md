@@ -1,6 +1,7 @@
 # curr-value
 
-Super simple realtime currency conversion lookup.
+Simple realtime currency conversion lookup
+browser app.
 
 - Finds currency values via the Cryptonator API.
 
