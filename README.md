@@ -36,9 +36,12 @@ queries can be performed.
 `fetchCryptonatorTicker()`
 
 performs 'simple ticker' queries
-using the cryptonator API and displays
-the data to the user.
+using the cryptonator API
 
+`populateCurrencyInfo()`
+
+updates & display data retrieved from
+the API response
 
 #### jQuery-Autocomplete
 
