@@ -56,7 +56,7 @@ https://github.com/h5bp/html5-boilerplate
 
 https://www.cryptonator.com/api/
 
-## LICENSE
+### LICENSE
 
 MIT license
 
