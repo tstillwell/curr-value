@@ -24,7 +24,7 @@ function fetchCryptonatorList(){ // retrieve currencies list
 }
 
 function fetchCryptonatorTicker(target, base) {
-    // retrieve currency ticker data from cryptonator API
+    // retrieve currency "simple ticker" data from cryptonator API
     // base is the currency to compare the target to
     // both must be currency codes listed on crypotonator api currency list
     let url = "https://www.cryptonator.com/api/ticker/";
