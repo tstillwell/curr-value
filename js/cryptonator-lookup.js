@@ -2,9 +2,11 @@
 // https://github.com/tstillwell/curr-value
 // MIT License
 
-function fetchCryptonatorList(){ // retrieve supported currencies list
-    // check local storage before API query
+function fetchCryptonatorList(){ 
+    // retrieve supported currencies list
     if (localStorage.cryptonator_list) {
+        // check local storage for currency list
+        // avoid query if list is in localStorage
         let list = JSON.parse(localStorage.getItem("cryptonator_list"));
         return buildCryptonatorAutocompleteData(list);
     }
